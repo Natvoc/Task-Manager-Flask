@@ -1,3 +1,7 @@
-# App Lista por hacer FLASK
+# App To-Do creada con Flask
 
-Aplicación Flask todo, creación de pendientes con almacenamiento en base de datos.
+##Descripción General
+
+Aplicación para anotar tareas por realizar, programda con Python, Flask, HTML, CSS y SQLAlchemy.
+
+# Instalación y configuración
