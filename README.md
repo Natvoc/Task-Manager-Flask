@@ -1,2 +1,3 @@
-# App-Lista-por-hacer-FLASK
-Aplicación Flask de Listas por hacer.
+# App Lista por hacer FLASK
+
+Aplicación Flask todo, creación de pendientes con almacenamiento en base de datos.
