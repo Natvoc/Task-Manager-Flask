@@ -1,6 +1,6 @@
 # App To-Do creada con Flask
 
-##Descripción General
+## Descripción General
 
 Aplicación para anotar tareas por realizar, programda con Python, Flask, HTML, CSS y SQLAlchemy.
 
