@@ -47,7 +47,6 @@ def view_index():
         create_note(request.form['text'])
     return render_template("index.html", notes=read_notes())
 
-
 #Editar una nota
 @app.route("/edit/<note_id>", methods=["POST","GET"])
 def edit_note(note_id):
