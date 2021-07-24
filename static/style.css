@@ -1,24 +1,139 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-body{
-    font-family: 'Poppins', sans-serif;    
-    background: #f8f8f8;
-}
-.contenedor{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   
-}
-.phone{
-    background: #ffffff;
-    margin-top: 2em;
-    padding: 4em 1em 4em 1em;
-    border-radius: 15px;
+* {
+    box-sizing: border-box;
 }
 
-.agregar{
-    font-size: 1em;
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0em;
+    width: 100%;
+    height: 100%;
 }
-.input-nuevo{
-    width: 75%;
+
+.contenedor {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+
+.tarjeta {
+    width: 100%;
+    max-width: 43.75em;
+    height: auto;
+    background: rgb(255, 255, 255);
+    box-shadow: 0em 0.188em 0.5em rgba(0, 0, 0, 0.14), 0.125em 0.25em 0.5em rgba(0, 0, 0, 0.14);
+    border-radius: 0.375em;
+}
+
+.tarjeta .encabezado {
+    padding: 1.5em 0.5em;
+    background: rgb(26, 101, 158);
+    box-shadow: 0em 0.125em 0.5em rgba(0, 0, 0, 0.14), 0em 0.125em 0.313em rgba(0, 0, 0, 0.22);
+    border-radius: 0.375em 0.375em 0em 0em;
+}
+
+.tarjeta .encabezado input {
+    width: 100%;
+    max-width: 33.313em;
+    color: rgb(77, 77, 77);
+    background: rgb(255, 255, 255);
+    padding: 0.9em 0.7em;
+    margin-right: 0em;
+    margin-bottom: 1em;
+    border: none;
+    border-radius: 0.375em;
+    box-shadow: 0em 0.063em 0.25em rgba(0, 0, 0, 0.25);
+}
+
+.tarjeta .encabezado button {
+    padding: 1em 2.5em;
+    color: rgb(255, 255, 255);
+    background: rgba(255, 107, 53, 1);
+    border-radius: 1.688em;
+    border: none;
+    box-shadow: 0em 0.125em 0.25em rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta .contenido {
+    padding: 0.8em 0.4em;
+}
+
+.tarjeta .contenido h6 {
+    font-size: 0.938em;
+    color: rgb(115 115 115);
+    text-align: left;
+    padding: 0em;
+    margin: 0em;
+    font-weight: 100;
+}
+
+.tarjeta .contenido .lista {
+    list-style: none;
+    flex-direction: column;
+    margin-top: 1em;
+    padding: 0em;
+}
+
+.tarjeta .contenido .lista li {
+    display: flex;
+    padding: 0em;
+    justify-content: space-between;
+    border-top: 0.063em solid rgba(182, 182, 182, 1);
+}
+
+.tarjeta .contenido .lista li:first-child {
+    border-top: none;
+}
+
+.tarjeta .contenido li input {
+    font-size: 1.2em;
+    color: rgb(20, 3, 41);
+}
+
+.tarjeta .contenido li span {
+    font-family: Atkinson Hyperlegible;
+    font-size: 0.875em;
+    line-height: 1em;
+    margin: auto 0em;
+}
+
+.tarjeta .contenido li a {
+    text-decoration: none;
+    margin: 0.6em;
+}
+
+.tarjeta .contenido li i {
+    margin-left: 0.5em;
+}
+
+.tarjeta .contenido .editar {
+    color: rgba(26, 101, 158, 1);
+}
+
+.tarjeta .contenido .eliminar {
+    color: rgba(110, 113, 145, 1);
+}
+.tarea{
+    width: 70%;
+    border: 0px solid;
+    
+}
+
+@media (min-width: 713px) {
+    .tarjeta .encabezado input {
+        margin-right: 1em;
+        margin-bottom: 0em;
+    }
+    .tarjeta .contenido {
+        padding: 0.8em 1em;
+    }
+    .tarjeta .contenido h6 {
+        padding: 0.4em 0em 0.8em;
+    }
+    .tarjeta .contenido .lista li {
+        padding: 0em 0.8em;
+    }
+    .tarjeta .contenido li p {
+        font-size: 1em;
+    }
 }
