@@ -6,4 +6,4 @@ Aplicación para anotar tareas por realizar, programda con Python, Flask, HTML, 
 
 # Instalación y configuración
 
-------------------------------
+-------------------------------
