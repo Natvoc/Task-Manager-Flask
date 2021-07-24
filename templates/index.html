@@ -1,42 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <title>App Lista por hacer Flask</title>
-        <link rel="stylesheet" href="../static/style.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-        <script  type = "text/javascript">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>Recordatorios</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script  type = "text/javascript">
           function redirect(link) {
             window.location.href = link;
          }
-        </script>
-    </head>
-    <body>
-        <div class="contenedor">
-            <div class="phone">
-                <div class="agregar">Nueva tarea</div>
+    </script> 
+</head>
+<body>
+    <div class="contenedor">
+        <div class="tarjeta">
+            <div class="encabezado">
                 <form action="/" method="POST">
-                    <input type="text" name="text" class="input-nuevo" placeholder="Escribir nueva tarea">
-                    <button class="btn-nuevo" type="submit" value="update">Crear</button>
+                    <input type="text" name="text" placeholder="Escriba aquí...">
+                    <button name="agregar" type="submit" value="update">Agregar</button>
                 </form>
-            {% for note in notes %}
-            <p>
+            </div>
+            <div class="contenido">
+                <h6>Recordatorios guardados</h6>
+
+                {% for note in notes %}
                 <form method="POST" action="/edit/{{note.id}}">
-                    <input type="hidden" name="done" value="off">
-                    <input type="text" title="{{note.dateAdded}}" value="{{note.text}}" name="text" class="">
-                      
-                        <button class="" type="submit" value="update"><i class="fas fa-save"></i></button>
-                        <input type="hidden" name="done" value="off">
-                        <button type="button" class="" onclick="redirect('/edit/{{note.id}}')" data-target="/edit/{{note.id}}" value="" name="done"> <i class="fas fa-trash-alt"></i> </button>                    
+                    <ul class="lista">
+                        <li>
+                            <input type="hidden" name="done" value="off">
+                            <input class="tarea" type="text" title="{{note.dateAdded}}" value="{{note.text}}" name="text">
+                            <span> 
+                                <a class="editar">Guardar <i class="fas fa-edit" type="submit" value="update"></i></a>
+                                <input type="hidden" name="done" value="off">
+                                <a class="eliminar" onclick="redirect('/edit/{{note.id}}')" data-target="/edit/{{note.id}}" name="done" href="#">Eliminar <i class="fas fa-trash-alt"></i></a>
+                            </span>
+                        </li>
+                        <hr>
+                    </ul>
                 </form>
-              {% endfor %}
+                {% endfor %}
+            </div>
         </div>
+    </div>
 
-
-
-
-
-          
-
-
+    <script src="https://kit.fontawesome.com/d91817788c.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>App Lista por hacer Flask</title>
+        <link rel="stylesheet" href="../static/style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+        <script  type = "text/javascript">
+          function redirect(link) {
+            window.location.href = link;
+         }
+        </script> 
+    </head>
+    <body>
+        <div class="contenedor">
+            <div class="phone">
+                <div class="agregar">Nueva tarea</div>
+
+                <form action="/" method="POST">
+                    <input type="text" name="text" class="input-nuevo" placeholder="Escribir nueva tarea">
+                    <button class="btn-nuevo" type="submit" value="update">Crear</button>
+                </form>
+
+            {% for note in notes %}
+                <form method="POST" action="/edit/{{note.id}}">
+                    <input type="hidden" name="done" value="off">
+                    <input type="text" title="{{note.dateAdded}}" value="{{note.text}}" name="text" class="">
+                      
+                        <button><i class="fas fa-save"type="submit" value="update"></i></button>
+                        <input type="hidden" name="done" value="off">
+                        <button type="button"  onclick="redirect('/edit/{{note.id}}')" data-target="/edit/{{note.id}}" value="" name="done"> <i class="fas fa-trash-alt"></i> </button>                    
+                </form>
+              {% endfor %}
+        </div>
+
+
+
+
+
+          
+
+
+</body>
+</html>
