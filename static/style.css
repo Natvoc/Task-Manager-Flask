@@ -113,6 +113,10 @@ body {
 .tarjeta .contenido .eliminar {
     color: rgba(110, 113, 145, 1);
 }
+button{
+    background-color: #ffffff;
+    border: 0px solid;
+}
 .tarea{
     width: 70%;
     border: 0px solid;
