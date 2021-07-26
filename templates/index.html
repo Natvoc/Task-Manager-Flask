@@ -35,7 +35,7 @@
                             <input type="hidden" name="done" value="off">
                             <input class="tarea" type="text" title="{{note.dateAdded}}" value="{{note.text}}" name="text">
                             <span> 
-                                <a class="editar">Guardar <i class="fas fa-edit" type="submit" value="update"></i></a>
+                                <button class="editar">Guardar <i class="fas fa-edit" type="submit" value="update"></i></button>
                                 <input type="hidden" name="done" value="off">
                                 <a class="eliminar" onclick="redirect('/edit/{{note.id}}')" data-target="/edit/{{note.id}}" name="done" href="#">Eliminar <i class="fas fa-trash-alt"></i></a>
                             </span>
