@@ -1,0 +1,12 @@
+click
+colorama
+DateTime
+Flask
+Flask-SQLAlchemy
+greenlet
+itsdangerous
+Jinja2
+MarkupSafe
+pytz
+SQLAlchemy
+Werkzeug
