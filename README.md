@@ -2,7 +2,7 @@
 
 ## Descripción General
 
-Aplicación para anotar tareas por realizar, programda con Python, Flask, HTML, CSS y SQLAlchemy.
+Aplicación para anotar tareas por realizar, programda con Python, Flask, HTML, CSS y SQLite.
 
 Artículo en proceso...
 
